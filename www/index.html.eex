@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>[minecraft]红石科技分享平台，一个更好的作品分享网站</title>
+    <meta name="description" content="A responsive web app template with common components like profile, list, tabs, menu views. Made for Codrops exclusively.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="xincs/output.css">
+    <link rel="stylesheet" href="xincs/light.css">
+  </head>
+  <style>
+   .link {
+       color: #999999;
+       font-size: 16px;
+       margin-top: 3px;
+   }
+   .link:hover {
+       color:#000000
+   }
+  </style>
+  <body class="bg-grey-lighter font-sans antialiased">
+    <div class="bg-indigo-darker text-center p-4 px-6 flex items-center">
+      <div class="hidden lg:block lg:w-1/4 xl:w-1/5 pr-8">
+        <a href="#" class="flex justify-start pl-6">
+          <img src="assets/images/logo.png" class="" alt="logo" width="140px">
+        </a>
+      </div>
+      <div class="lg:hidden pr-3" id="mobile-nav-trigger">
+        <div class="toggle p-2 block"><span></span></div>
+      </div>
+      <div class="flex flex-grow items-center lg:w-3/4 xl:w-4/5">
+        <span class="relative w-full">
+          <input type="search" placeholder="暂时不能用" class="w-full text-sm text-white transition border border-transparent focus:outline-none focus:border-indigo placeholder-white rounded bg-indigo-medium py-1 px-2 pl-10 appearance-none leading-normal ds-input">
+          <div class="absolute search-icon" style="top: .5rem; left: .8rem;">
+            <svg class="fill-current pointer-events-none text-white w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
+            </svg>
+          </div>
+        </span>
+        <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=-pxiOOYI_hHklWbJOE_UTqyW0IbdZ97C&jump_from=webapi" class="text-sm text-right text-white py-2 px-3 hover:text-grey-dark no-underline hidden lg:block lg:w-1/3 px-6" style="padding-left: 0px;width: 424px;">加入QQ群</a>
+        <a href="zanzhu.html" class="text-sm text-right text-white py-2 px-3 hover:text-grey-dark no-underline hidden lg:block lg:w-1/3 px-6" style="padding-left: 0px;width: 124px;">赞助我们</a>
+      </div>
+    </div>
+    <!-- Main -->
+    <div class="flex">
+      <!-- Side Nav -->
+      <nav class="absolute lg:relative lg:flex lg:text-sm bg-indigo-darker lg:bg-transparent pin-l pin-r py-4 px-6 lg:pt-10 lg:pl-12 lg:pr-6 -mt-1 lg:mt-0 overflow-y-auto lg:w-1/5 lg:border-r z-40 hidden">
+        <ul class="list-reset mb-8 w-full">
+          <li class="ml-2 mb-4 flex">
+            <img src="assets/images/home-default.svg" alt="home-icon" class="w-4 h-4 mr-2">
+            <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium mobile-home-trigger">主页</div>
+          </li>
+          <li class="ml-2 mb-4">
+            <div class="flex" id="sidenav-categories-trigger">
+              <img src="assets/images/category-default.svg" alt="home-icon" class="w-4 h-4 mr-2">
+              <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium w-full relative">
+                BE主要分类
+                <div class="pointer-events-none absolute pin-y pin-r flex items-center px-1 text-grey-darker" id="#">
+                  <svg class="fill-current h-4 w-4" xmlns="#" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <ul class="text-grey lg:text-grey-dark list-reset leading-loose mt-2" id="sidenav-categories">
+              <li><a href="1-0-0-0.html" class="text-black no-underline hover:text-indigo-dark hover:cursor-pointer transition-normal ml-1 border-l border-grey-dark pl-4">BE生电</a></li>
+              <li><a href="hsm0-0-0-0.html" class="text-black no-underline hover:text-indigo-dark hover:cursor-pointer transition-normal ml-1 border-l border-grey-dark pl-4">活塞门</a></li>
+              <li><a href="shudian.html" class="text-black no-underline hover:text-indigo-dark hover:cursor-pointer transition-normal ml-1 border-l border-grey-dark pl-4">数字红石</a></li>
+              <li><a href="wffl.html" class="text-black no-underline hover:text-indigo-dark hover:cursor-pointer transition-normal ml-1 border-l border-grey-dark pl-4">无法确定分类的</a></li>
+            </ul>
+          </li>
+          <li class="ml-2 mb-4 flex">
+            <img src="assets/images/wishlist-default.svg" alt="wishlist-icon" class="w-4 h-4 mr-2">
+            <a target="_blank" href="https://kaihei.co/9kT4dn" class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium mobile-home-trigger">加入RTSP频道</a>
+          </li>
+          <li class="ml-2 mb-4 flex">
+            <img src="assets/images/wishlist-default.svg" alt="wishlist-icon" class="w-4 h-4 mr-2">
+            <a href="gengduo.html" class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium mobile-home-trigger">发现更多</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Content -->
+      <div class="flex flex-1 flex-col md:px-6 pt-10" id="content">
+        <!-- Title -->
+        <div class="px-6 md:px-0 flex justify-between items-center -order-1">
+          <div>
+            <h2 class="font-normal">BE &amp; 红石科技分享平台</h2>
+            <p class="text-grey-dark mt-2">Redstone technology sharing platform</p>
+          </div>
+          <a href="je/index.html"><button class="bg-indigo-dark hover:bg-indigo-darker text-white text-sm py-2 px-4 rounded-full transition-normal hover:shadow hover:translate-y-1 active:translate-y-1 focus:outline-none">转到 java 版分区</button></a>
+        </div>
+        <!-- Desktop Stats -->
+        <div class="hidden px-6 md:px-0 mt-4 md:flex flex-wrap order-1 md:-order-1 md:shadow-md js-tab-pane" id="section-stats">
+          <div class="p-4 px-6 w-full md:w-1/2 rounded md:rounded-r-none bg-white shadow-md md:shadow-none">
+            <h4>收录机器总数量</h4>
+            <table class="mt-4 w-full">
+              <thead class="p-2 text-sm leading-loose border-b text-indigo">
+                <tr>
+                  <td>分区</td>
+                  <td class="text-center">目前收录数量</td>
+                  <td class="text-right">状态</td>
+                </tr>
+              </thead>
+              <tbody class="p-2 leading-loose text-sm">
+                <tr class="border-b">
+                  <td class="py-2">生电科技树</td>
+                  <td class="py-2 text-center">3</td>
+                  <td class="py-2 text-right">已完成</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-2">活塞门</td>
+                  <td class="py-2 text-center">0</td>
+                  <td class="py-2 text-right">细分类还没做</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-2">数字红石</td>
+                  <td class="py-2 text-center">0</td>
+                  <td class="py-2 text-right">根本没有</td>
+                </tr>
+                <tr>
+                  <td class="py-2">无法确定分类的机器</td>
+                  <td class="py-2 text-center">2</td>
+                  <td class="py-2 text-right">没找</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="w-full md:w-1/2 p-4 md:pt-12 md:pl-1 mt-4 md:mt-0 lg:pt-12 lg:pl-8 rounded md:rounded-r-none bg-white shadow-md md:shadow-none">
+            <div class="flex">
+              <div class="w-1/2">
+                <p class="text-indigo text-sm p-2"><big>RTSP正在进展</big></p>
+                <p class="font-medium text-sm pl-2">分类页制作</p>
+              </div>
+              <div class="w-1/2">
+                <p class="text-indigo text-sm p-2"><big>昨日新增</big></p>
+                <p class="font-medium text-sm pl-2">--</p>
+              </div>
+            </div>
+            <div class="pt-6">
+              <p class="text-indigo text-sm p-2"><h3>要死了啦！</h3></p>
+              <p class="font-medium text-sm pl-2 leading-normal">红石没钱续服务器了！</p>
+            </div>
+          </div>
+        </div>
+        <div class="hidden px-6 md:px-0 mt-4 md:flex flex-wrap order-1 md:-order-1 md:shadow-md js-tab-pane" id="section-stats">
+          <div class="p-4 px-6 w-full md:w-1/2 rounded md:rounded-r-none bg-white shadow-md md:shadow-none">
+            <h4>今日推荐</h4>
+            <table class="mt-4 w-full">
+              <thead class="p-2 text-sm leading-loose border-b text-indigo">
+                <tr>
+                  <td>目前进度</td>
+                  <td class="text-center">正在收集“方块资源获取”</td>
+                  <td class="text-right">刚刚开始</td>
+                </tr>
+              </thead>
+              <tbody class="p-2 leading-loose text-sm">
+                <tr class="border-b">
+                  <td class="py-2">生电科技树</td>
+                  <td class="py-2 text-center">3</td>
+                  <td class="py-2 text-right"></td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-2">活塞门</td>
+                  <td class="py-2 text-center">0</td>
+                  <td class="py-2 text-right">细分类还没做</td>
+                </tr>
+                <tr>
+                  <td class="py-2">数字红石</td>
+                  <td class="py-2 text-center">0</td>
+                  <td class="py-2 text-right">根本没有</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="p-4 px-6 w-full md:w-1/2 rounded md:rounded-r-none bg-white shadow-md md:shadow-none">
+            <h4>站长推荐</h4>
+          </div>
+        </div>
+        <!-- Filter -->
+        <div class="px-6 md:px-0 flex items-baseline justify-between border-b-2 border-grey-light mt-6 order-0 lg:order-1">
+          <h4 class="hidden md:inline-block text-grey-dark font-normal">其他板块</h4>
+          <div>
+            <div class="no-underline inline-block border-indigo pb-2 px-2 text-sm mr-2 text-indigo-darkest hover:cursor-pointer js-tab active relative" data-tab="section-library">新推荐</div>
+            <div class="no-underline inline-block border-indigo pb-2 px-2 text-sm text-indigo-darkest hover:cursor-pointer js-tab relative" data-tab="section-picks">在线视频</div>
+          </div>
+        </div>
+        <!-- Library -->
+
+        <!-- Picks -->
+        <div class="hidden px-2 pt-2 md:px-0 flex-wrap order-2 pb-8 js-tab-pane active" id="section-library">
+          <div class="flex justify-start items-center p-5 px-6  w-full sm:w-1/2" style="background-color:#b3b3b3;">
+            <img src="assets/images/zhuye-03.jpg" alt="pick" class="shadow-md w-1/3">
+            <div class="ml-4 mt-1 w-2/3">
+              <p class="font-medium">BE生电分类</p>
+              <p class="mt-3 text-sm">一个庞大的工程</p>
+              <a href="1-0-0-0.html"><button class="shadow-md mt-3 bg-grey-lightest hover:bg-white text-indigo-darker text-xs py-2 px-4 rounded-full transition-normal hover:shadow hover:translate-y-1 active:translate-y-1 focus:outline-none">了解更多</button></a>
+            </div>
+          </div>
+          <div class="flex justify-start items-center p-5 px-6  w-full sm:w-1/2" style="background-color:#999999;">
+            <img src="assets/images/zhuye02.jpg" alt="pick" class="shadow-md w-1/3">
+            <div class="ml-4 mt-1 w-2/3">
+              <p class="font-medium">望星城小游戏服务器</p>
+              <p class="mt-3 text-sm">哦，一个新成立的小游戏服。<br>有什么呢？跑酷，解密，迷宫和...仿照花雨庭的大主城</p>
+              <a target="_blank" href="wxc/"><button class="shadow-md mt-3 bg-grey-lightest hover:bg-white text-indigo-darker text-xs py-2 px-4 rounded-full transition-normal hover:shadow hover:translate-y-1 active:translate-y-1 focus:outline-none">了解更多</button></a>
+            </div>
+          </div>
+        </div>
+        <!-- 在线视频 -->
+        <div class="hidden flex-wrap order-2 pt-0 md:pt-6 md:pb-8 js-tab-pane" id="section-picks">
+          <div class="flex flex-row sm:flex-col items-center sm:items-start w-full xs:w-1/2 sm:w-1/3 md:w-1/5 p-4 js-book">
+            <a target="_blank" href="shipinye/shipin.html"><img src="shipin/fengmian/00-00.png" alt="mopemope" class="w-1/3 sm:w-full shadow-md transition-normal hover:brighter hover:translate-y-1 hover:shadow-lg hover:border-indigo"></a>
+            <div class="ml-3 sm:ml-0 w-2/3 sm:w-full">
+              <p class="text-sm my-2 font-medium sm:font-normal">mopemope【原版】</p>
+              <p class="block sm:hidden mt-2 mb-3 text-sm leading-medium">RTSP官方</p>
+              <div class="block sm:hidden relative">
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row sm:flex-col items-center sm:items-start w-full xs:w-1/2 sm:w-1/3 md:w-1/5 p-4 js-book">
+            <a target="_blank" href="shipinye/av00-01.html"><img src="shipin/fengmian/00-01.png" alt="00-01" class="w-1/3 sm:w-full shadow-md transition-normal hover:brighter hover:translate-y-1 hover:shadow-lg hover:border-indigo"></a>
+            <div class="ml-3 sm:ml-0 w-2/3 sm:w-full">
+              <p class="text-sm my-2 font-medium sm:font-normal">测试视频</p>
+              <p class="block sm:hidden mt-2 mb-3 text-sm leading-medium">明日方舟</p>
+              <div class="block sm:hidden relative">
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row sm:flex-col items-center sm:items-start w-full xs:w-1/2 sm:w-1/3 md:w-1/5 p-4 js-book">
+            <a target="_blank" href="shipinye/av00-02.html"><img src="shipin/fengmian/00-02.png" alt="00-02" class="w-1/3 sm:w-full shadow-md transition-normal hover:brighter hover:translate-y-1 hover:shadow-lg hover:border-indigo"></a>
+            <div class="ml-3 sm:ml-0 w-2/3 sm:w-full">
+              <p class="text-sm my-2 font-medium sm:font-normal">测试视频</p>
+              <p class="block sm:hidden mt-2 mb-3 text-sm leading-medium">游戏</p>
+              <div class="block sm:hidden relative">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Profile -->
+
+      <div class="hidden absolute pin-b z-10 lg:relative lg:block w-full lg:w-1/5 bg-grey-lighter-2 px-6 pt-10" id="profile">
+        <div class="flex items-center mb-6">
+          <svg width="30px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="#" xmlns:xlink="http://www.w3.org/1999/xlink" id="avatar">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g transform="translate(-1178.000000, -87.000000)">
+                <g transform="translate(1159.000000, 0.000000)">
+                  <g transform="translate(0.000000, 87.000000)">
+                    <g transform="translate(19.000000, 0.000000)">
+                      <img src="../assets/images/zhudetouxiang.jpg" width="60px" height="60px"></circle>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <div class="ml-3">
+            <a href="https://space.bilibili.com/551329416" target="_blank" class="link text-black no-underline"><p>AIehxj红石redstone</p></a>
+            <p class="text-grey-dark mt-1 text-sm">RTSP创立者</p>
+          </div>
+        </div>
+        <div class="my-4 border-t pt-4">
+          <h3 class="text-indigo-dark font-normal">ta的作品...</h3>
+          <div class="flex flex-wrap -ml-2 justify-start items-center">
+            <img src="assets/images/404.jpg" alt="read" class="w-1/6 lg:w-1/5 max-w-tiny shadow-md block m-2 transition-normal hover:brighter">
+          </div>
+        </div>
+        <div class="mt-6">
+          <p><h3>RTSP其他板块</h3></p>
+          <div class="flex items-start mt-2">
+            <div class="ml-3">
+              <dl class="sub-sub-menu">
+                <dt><a target="_blank" href="index.html" class="link text-black no-underline">RTSP主页</a></dt>
+                <dt><a target="_blank" href="faq.html" class="link text-black no-underline">RTSP的一些问题</a></dt>
+                <dt><a target="_blank" href="contact.html" class="link text-black no-underline">如何投稿？</a></dt>
+                <dt><a target="_blank" href="https://b23.tv/DMIzVP" class="link text-black no-underline">RTSP哔哩哔哩主页</a></dt>
+                <dt><a target="_blank" href="tigongbangzhurenyuan.html" class="link text-black no-underline">提供帮助人员</a></dt>
+                <dt><a target="_blank" href="contact.html" class="link text-black no-underline">如何联系到我们</a></dt>
+              </dl><br>
+              <p class="mt-1 leading-normal">如果有什么解决不了的问题，可以反馈至邮箱</p>
+              <p class="text-indigo text-sm mt-1"><a target="_blank" href="mailto:redstone-rtsp@foxmail.com" class="link text-black no-underline">redstone-rtsp@foxmail.com</a></p><br><br>
+              <a target="_blank" href="http://124.222.193.254:8888/down/1xYZpt7BnL4e" class="link text-black no-underline">下载安卓端基岩版1.18.31</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium mobile-home-trigger"><h3>友情链接</h3></div>
+        <br>
+        <div style="width: 150px;"><a target="_blank" href="https://www.dfgs.top/" class="link">方块社+系列服务器</a></div>
+        <div style="width: 150px;"><a target="_blank" href="http://cnhh.xyz" class="link">憨憨服</a></div>
+        <div style="width: 150px;"><a target="_blank" href="#" class="link">TRC生存服务器</a></div>
+        <div style="width: 150px;"><a target="_blank" href="https://space.bilibili.com/668356346" class="link">YXS系列服务器</a></div>
+        <div style="width: 150px;"><a target="_blank" href="https://space.bilibili.com/342032279" class="link">TLC生存服务器</a></div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    <script src="xincs/bundle.js" async defer></script>
+  </body>
+</html>

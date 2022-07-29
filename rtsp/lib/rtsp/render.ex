@@ -1,7 +1,12 @@
 defmodule Rtsp.Render do
 
-  def render(section_title, number) do
-    EEx.eval_file("../www/template.html.eex", [section_title: section_title, n: number])
+  def render(data) do
+    EEx.eval_file("../www/template.html.eex",
+      [
+        section_title: data.title,
+        #description: data.description,
+        section_list: data.list
+      ])
   end
 
 end

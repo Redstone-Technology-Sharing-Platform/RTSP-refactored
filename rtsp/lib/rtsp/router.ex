@@ -10,10 +10,10 @@ defmodule Rtsp.Router do
   plug :match
   plug :dispatch
 
-  forward "/api", to: Rtsp.Api
+  forward "/archive", to: Rtsp.RenderRouter
 
   get "/" do
-    page = Rtsp.Render.render("this is a test title", 10)
+    page = File.read!("../www/index.html.eex")
     send_resp(conn, 200, page)
   end
 
