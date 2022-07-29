@@ -10,7 +10,7 @@ defmodule Rtsp.Router do
   plug :match
   plug :dispatch
 
-  forward "/archive", to: Rtsp.RenderRouter
+  forward "/technical_survival", to: Rtsp.RenderRouter
 
   get "/" do
     page = File.read!("../www/index.html.eex")

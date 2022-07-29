@@ -5,7 +5,8 @@ defmodule Rtsp.Render do
       [
         section_title: data.title,
         #description: data.description,
-        section_list: data.list
+        section_list: data.list,
+        parent_dir: data.name
       ])
   end
 

@@ -10,12 +10,17 @@ defmodule Rtsp.RenderRouter do
   plug :dispatch
 
   get ":path" do
-    {:ok, data} = Rtsp.Data.list(path)
-    page = Render.render(data)
-    send_resp(conn, 200, page)
+    case Rtsp.Data.list(path) do
+      {:ok, data} ->
+        page = Render.render(data)
+        send_resp(conn, 200, page)
+      {:error, error} ->
+        send_resp(conn, 404,
+          "Not Found: #{inspect(__MODULE__)}\n#{inspect(error)}")
+    end
   end
 
   match _ do
-    send_resp conn, 501, "Not implemented: RenderRouter"
+    send_resp conn, 501, "Not implemented: #{inspect(__MODULE__)}"
   end
 end
