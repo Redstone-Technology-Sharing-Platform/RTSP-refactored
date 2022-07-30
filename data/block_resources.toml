@@ -1,0 +1,24 @@
+title =  "方块资源获取"
+description = "树场，石材，铁，绿宝石，冰，雪，重力方块，混凝土，黑曜石，末地石，土，树叶，基岩，气泡柱，地狱门方块，地狱岩，羊毛"
+
+[tree]
+title = "树场"
+description = "要致富, 先撸树"
+
+[tree.dark_oak]
+title = "深色橡木"
+description = "大鸡腿树"
+videos = [
+       "BV1Zf4y1P7iX",
+       "BV1Pf4y187T9",
+       "BV1d541147mU",
+]
+
+[tree.big_spruce]
+title = "大云杉"
+description = "40格!"
+videos = [
+       "BV1Pw411R7fk",
+       "BV1U5411c7jU",
+       "BV1H54y1877o",
+]

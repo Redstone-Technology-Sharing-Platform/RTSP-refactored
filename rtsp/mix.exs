@@ -23,7 +23,8 @@ defmodule Rtsp.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.0"},
-      {:poison, "~> 5.0"}
+      {:poison, "~> 5.0"},
+      {:toml, "~> 0.6.2"}
     ]
   end
 end

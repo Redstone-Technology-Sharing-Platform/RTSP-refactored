@@ -12,7 +12,7 @@ defmodule Rtsp.RenderRouter do
   get ":path" do
     case Rtsp.Data.list(path) do
       {:ok, data} ->
-        page = Render.render(data)
+        page = Render.render(data, path |> IO.inspect())
         send_resp(conn, 200, page)
       {:error, error} ->
         send_resp(conn, 404,

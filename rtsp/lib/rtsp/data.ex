@@ -1,22 +1,18 @@
 defmodule Rtsp.Data do
-  defstruct [:name, :title, :description, :image, list: []]
 
   @data_path "../data/"
 
   def list(path) do
-    expand_path = @data_path <> path <> ".json"
+    expand_path = @data_path <> path <> ".toml"
     if File.exists?(expand_path) do
-      content = File.read!(expand_path)
-      case Poison.decode(content, [as: Rtsp.Data, keys: :atoms]) do
+      # content = File.read!(expand_path)
+      case Toml.decode_file(expand_path) do
         {:ok, _} = decoded -> decoded
         {:error, _} = error -> error
       end
     else
       {:error, :notfound}
     end
-  end
-
-  def list(path_1, path_2) do
   end
 
   def videos(path_1, path_2) do

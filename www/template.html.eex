@@ -57,7 +57,7 @@
             <div class="flex" id="sidenav-categories-trigger">
               <img src="../assets/images/category-default.svg" alt="home-icon" class="w-4 h-4 mr-2">
               <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium w-full relative">
-                <%= section_title %>
+                <%= data["title"] %>
                 <div class="pointer-events-none absolute pin-y pin-r flex items-center px-1 text-grey-darker" id="#">
                   <svg class="fill-current h-4 w-4" xmlns="#" viewBox="0 0 20 20">
                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -67,11 +67,11 @@
             </div>
             <ul class="text-grey lg:text-grey-dark list-reset leading-loose mt-2" id="sidenav-categories">
               <%=
-              Enum.map(section_list, fn obj ->
+              Enum.map(Map.keys(data) -- ["description", "title"], fn obj ->
                   ~s/
                   <li class="hover:text-indigo-dark hover:cursor-pointer transition-normal ml-1 border-l border-grey-dark pl-4">
-                  <a href="#{obj.name}" class="link text-black no-underline">
-                  #{obj.title}
+                  <a href="#{data[obj]["name"]}" class="link text-black no-underline">
+                  #{data[obj]["title"]}
                   <\/a>
                   <\/li>
                   / end)
@@ -89,7 +89,7 @@
         <!-- Title -->
         <div class="px-6 md:px-0 flex justify-between items-center -order-1">
           <div>
-            <h2 class="font-normal"><%= section_title %></h2>
+            <h2 class="font-normal"><%= data["title"] %></h2>
             <p class="text-grey-dark mt-2">Redstone technology sharing platform</p>
           </div>
           <a href="1-7-0-0.html"><button class="bg-indigo-dark hover:bg-indigo-darker text-white text-sm py-2 px-4 rounded-full transition-normal hover:shadow hover:translate-y-1 active:translate-y-1 focus:outline-none">返回上一页</button></a>
@@ -101,14 +101,14 @@
         <!-- 目录列表 -->
         <div class="hidden px-2 pt-2 md:px-0 flex-wrap order-2 pb-8 js-tab-pane active" id="section-library">
           <%=
-          Enum.map(section_list, fn obj ->
+          Enum.map(Map.keys(data) -- ["description", "title"], fn obj ->
               ~s/
               <div class="flex justify-start items-center p-5 px-6 w-full sm:w-1\/2" style="background-color:#b3b3b3;">
-              <img src="..\/assets\/images\/section_icons\/#{parent_dir}\/#{obj.name}\.jpg" alt="#{obj.name}" class="shadow-md w-1\/3">
+              <img src="..\/assets\/images\/section_icons\/#{parent_dir}\/#{obj}.jpg" alt="#{data[obj]["name"]}" class="shadow-md w-1\/3">
               <div class="ml-4 mt-1 w-2\/3">
-              <p class="font-medium">#{obj.title}<\/p>
-              <p class="mt-3 text-sm">#{obj.description}<\/p>
-              <a href="#{obj.name}">
+              <p class="font-medium">#{data[obj]["title"]}<\/p>
+              <p class="mt-3 text-sm">#{data[obj]["description"]}<\/p>
+              <a href="#{obj}">
               <button class="shadow-md mt-3 bg-grey-lightest hover:bg-white text-indigo-darker text-xs py-2 px-4 rounded-full transition-normal hover:shadow hover:translate-y-1 active:translate-y-1 focus:outline-none">
               了解更多
               <\/button>
