@@ -10,9 +10,21 @@ defmodule Rtsp.RenderRouter do
   plug :dispatch
 
   get ":path" do
+    IO.inspect path
     case Rtsp.Data.list(path) do
       {:ok, data} ->
-        page = Render.render(data, path |> IO.inspect())
+        page = Render.render(data)
+        send_resp(conn, 200, page)
+      {:error, error} ->
+        send_resp(conn, 404,
+          "Not Found: #{inspect(__MODULE__)}\n#{inspect(error)}")
+    end
+  end
+
+  get ":path_1/:path_2" do
+    case Rtsp.Data.list(path_1, path_2) do
+      {:ok, data} ->
+        page = Render.render(data)
         send_resp(conn, 200, page)
       {:error, error} ->
         send_resp(conn, 404,

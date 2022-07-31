@@ -14,7 +14,7 @@ defmodule Rtsp.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :mnesia],
       mod: {Rtsp.Application, []}
     ]
   end
@@ -23,6 +23,7 @@ defmodule Rtsp.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.0"},
+      {:httpoison, "~> 1.8"},
       {:poison, "~> 5.0"},
       {:toml, "~> 0.6.2"}
     ]

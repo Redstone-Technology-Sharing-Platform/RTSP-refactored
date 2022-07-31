@@ -1,10 +1,10 @@
 defmodule Rtsp.Render do
 
-  def render(data, path) do
+  @spec render(Rtsp.Data) :: binary
+  def render(data) do
     EEx.eval_file("../www/template.html.eex",
       [
         data: data,
-        parent_dir: path
       ])
   end
 
