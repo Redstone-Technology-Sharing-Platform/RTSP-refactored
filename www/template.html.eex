@@ -6,9 +6,9 @@
     <title>[miecraft]红石科技分享平台-RTSP 一个更好的作品分享平台</title>
     <meta name="description" content="A responsive web app template with common components like profile, list, tabs, menu views. Made for Codrops exclusively.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.png">
-    <link rel="stylesheet" href="../xincs/output.css">
-    <link rel="stylesheet" href="../xincs/light.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="/xincs/output.css">
+    <link rel="stylesheet" href="/xincs/light.css">
   </head>
   <style>
     .link {
@@ -24,7 +24,7 @@
     <div class="bg-indigo-darker text-center p-4 px-6 flex items-center">
       <div class="hidden lg:block lg:w-1/4 xl:w-1/5 pr-8">
         <a href="#" class="flex justify-start pl-6">
-        <img src="../assets/images/logo.png" class="" alt="logo" width="140px">
+        <img src="/assets/images/logo.png" class="" alt="logo" width="140px">
       </a>
       </div>
       <div class="lg:hidden pr-3" id="mobile-nav-trigger">
@@ -50,12 +50,12 @@
       <nav class="absolute lg:relative lg:flex lg:text-sm bg-indigo-darker lg:bg-transparent pin-l pin-r py-4 px-6 lg:pt-10 lg:pl-12 lg:pr-6 -mt-1 lg:mt-0 overflow-y-auto lg:w-1/5 lg:border-r z-40 hidden">
         <ul class="list-reset mb-8 w-full">
           <li class="ml-2 mb-4 flex">
-            <img src="../assets/images/home-default.svg" alt="home-icon" class="w-4 h-4 mr-2">
+            <img src="/assets/images/home-default.svg" alt="home-icon" class="w-4 h-4 mr-2">
             <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium mobile-home-trigger">主页</div>
           </li>
           <li class="ml-2 mb-4">
             <div class="flex" id="sidenav-categories-trigger">
-              <img src="../assets/images/category-default.svg" alt="home-icon" class="w-4 h-4 mr-2">
+              <img src="/assets/images/category-default.svg" alt="home-icon" class="w-4 h-4 mr-2">
               <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium w-full relative">
                 <%= data.title %>
                 <div class="pointer-events-none absolute pin-y pin-r flex items-center px-1 text-grey-darker" id="#">
@@ -79,7 +79,7 @@
             </ul>
           </li>
           <li class="ml-2 mb-4 flex">
-            <img src="../assets/images/wishlist-default.svg" alt="wishlist-icon" class="w-4 h-4 mr-2">
+            <img src="/assets/images/wishlist-default.svg" alt="wishlist-icon" class="w-4 h-4 mr-2">
             <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium mobile-home-trigger">发现更多</div>
           </li>
         </ul>
@@ -170,6 +170,6 @@
         <br>
       </div>
     </div>
-    <script src="../xincs/bundle.js" async defer></script>
+    <script src="/xincs/bundle.js" async defer></script>
   </body>
 </html>

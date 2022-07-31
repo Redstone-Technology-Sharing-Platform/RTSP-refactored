@@ -17,7 +17,7 @@ defmodule Rtsp.RenderRouter do
         send_resp(conn, 200, page)
       {:error, error} ->
         send_resp(conn, 404,
-          "Not Found: #{inspect(__MODULE__)}\n#{inspect(error)}")
+          "Not Found: #{inspect(__MODULE__)}\n#{inspect(error)}\n1")
     end
   end
 
@@ -28,7 +28,18 @@ defmodule Rtsp.RenderRouter do
         send_resp(conn, 200, page)
       {:error, error} ->
         send_resp(conn, 404,
-          "Not Found: #{inspect(__MODULE__)}\n#{inspect(error)}")
+          "Not Found: #{inspect(__MODULE__)}\n#{inspect(error)}\n2")
+    end
+  end
+
+  get ":path_1/:path_2/:path_3" do
+    case Rtsp.Data.videos(path_1, path_2, path_3) do
+      {:ok, data} ->
+        page = Render.render(data)
+        send_resp(conn, 200, page)
+      {:error, error} ->
+        send_resp(conn, 404,
+          "Not Found: #{inspect(__MODULE__)}\n#{inspect(error)}\n3")
     end
   end
 

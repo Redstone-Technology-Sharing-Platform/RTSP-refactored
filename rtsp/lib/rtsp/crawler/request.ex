@@ -1,8 +1,21 @@
 defmodule Rtsp.Crawler.Request do
-  @api "http://api.bilibili.com/x/web-interface/view"
+  @api "http://api.bilibili.com/x/web-interface/view?bvid="
 
-  def get_databv() do
+
+  def get_data(bv) do
+    json = HTTPoison.get!(@api <> bv).body |> Poison.decode
+    case json do
+      {:error, _} = error -> error
+      {:ok, decoded} ->
+        case decoded["code"] do
+          0 ->
+            title  = decoded["data"]["title"]         |> IO.inspect
+            author = decoded["data"]["owner"]["name"] |> IO.inspect
+            image  = decoded["data"]["pic"]           |> IO.inspect
+            {:ok, title, author, image}
+          status_code -> {:error, status_code}
+        end
+    end
   end
-
 
 end

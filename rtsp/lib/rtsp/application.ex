@@ -5,7 +5,16 @@ defmodule Rtsp.Application do
   @impl true
   def start(_type, _args) do
   children = [
-      {Plug.Cowboy, scheme: :http, plug: Rtsp.Router, options: [port: 8080]}
+      {
+        Plug.Cowboy,
+        scheme: :http, plug: Rtsp.Router,
+        options: [port: 8080]
+      },
+      %{
+        id: DB,
+        start: {Rtsp.Crawler.DB, :start, []},
+        type: :worker,
+      }
     ]
     opts = [strategy: :one_for_one, name: Rtsp.Supervisor]
 
