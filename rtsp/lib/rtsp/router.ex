@@ -5,7 +5,7 @@ defmodule Rtsp.Router do
   plug Plug.Static,
     at: "/",
     from: "../www",
-    only: ["assets", "xincs", "robots.txt"]
+    only: ["assets", "xincs", "robots.txt", "sponsor.html"]
 
   plug :match
   plug :dispatch
