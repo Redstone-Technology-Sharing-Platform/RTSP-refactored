@@ -1,30 +1,30 @@
 defmodule Rtsp.Crawler.DB do
   def db_init() do
     :mnesia.create_table(BiliBili, [attributes:
-                                    [:bv, :title, :author, :image],
+                                    [:bv, :title, :author],
                                     disc_copies: [node()]  # save to disk
                                    ])
   end
 
-  def start() do
-    pid = spawn_link(fn -> db_loop() end)
-    Process.register(pid, :db)
-    :timer.sleep(:infinity)
+  def start_link(_) do
+    GenServer.start_link(__MODULE__, nil, name: :db)
   end
 
-  def db_loop() do
-    receive do
-      {:query, from_pid, bv} ->
-        IO.puts "query database"
-        case db_get_data(bv) do
-          {:atomic, []} ->
-            db_add(bv)
-          {:atomic, [{BiliBili, ^bv, title, author, image}]} ->
-            send(from_pid, {:ok, title, author, image})
-        end
-      msg -> IO.inspect msg
+
+  use GenServer
+
+  @impl true
+  def init(state), do: {:ok, state}
+
+  @impl true
+  def handle_call({:query, bv}, _from, state) do
+    case db_get_data(bv) do
+      {:atomic, [{BiliBili, ^bv, title, author}]} ->
+        {:reply, {:ok, title, author}, state}
+      {:atomic, []} ->
+        res = db_add(bv)
+        {:reply, res, state}
     end
-    db_loop()
   end
 
   def db_get_data(bv) do
@@ -35,11 +35,12 @@ defmodule Rtsp.Crawler.DB do
   def db_add(bv) do
     case Rtsp.Crawler.Request.get_data(bv) do
       {:error, _} = error -> error
-      {:ok, title, author, image} ->
+      {:ok, title, author} ->
         :mnesia.transaction(fn ->
-          :mnesia.write({BiliBili, bv, title, author, image})
+          :mnesia.write({BiliBili, bv, title, author})
         end)
         |> IO.inspect
+        {:ok, title, author}
     end
   end
 end

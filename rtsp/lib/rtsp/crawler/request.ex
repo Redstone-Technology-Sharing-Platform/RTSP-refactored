@@ -11,8 +11,10 @@ defmodule Rtsp.Crawler.Request do
           0 ->
             title  = decoded["data"]["title"]         |> IO.inspect
             author = decoded["data"]["owner"]["name"] |> IO.inspect
-            image  = decoded["data"]["pic"]           |> IO.inspect
-            {:ok, title, author, image}
+            image_url = decoded["data"]["pic"]
+            :ok = File.write("../www/assets/images/bilibili/#{bv}.jpg",
+              HTTPoison.get!(image_url).body)
+            {:ok, title, author}
           status_code -> {:error, status_code}
         end
     end

@@ -3,6 +3,7 @@ defmodule Rtsp.Data do
   alias Rtsp.Data
   @data_path "../data/"
   @image_path "/assets/images/section_icons/"
+  @bv_image_path "/assets/images/bilibili/"
   @bilibili "https://bilibili.com/"
 
   @spec list(String.t) :: {:ok, Data} | {:error, term}
@@ -18,7 +19,7 @@ defmodule Rtsp.Data do
         list: Map.keys(content) -- ["title", "description"]
         |> Enum.map(fn key ->
           # add :path and :image for each obj in list
-          Map.put(content[key], :path, key)
+          Map.put(content[key], :path, path <> "/" <> key)
           |> Map.put(:image, @image_path <> path <> "/" <> key <> ".jpg")
         end)
         |> IO.inspect()
@@ -73,12 +74,12 @@ defmodule Rtsp.Data do
                 list: content_part["videos"]
                 |> IO.inspect
                 |> Enum.map(fn bv ->
-                  {v_title, v_author, v_image} = get_bv_info(bv)
+                  {v_title, v_author} = get_bv_info(bv)
                   %{
                     "description" => v_author,
                     "title" => v_title,
                     path: @bilibili <> bv,
-                    image: v_image,
+                    image: @bv_image_path <> bv <> ".jpg",
                     }
                 end)
                 |> IO.inspect()
@@ -105,14 +106,10 @@ defmodule Rtsp.Data do
   end
 
   defp get_bv_info(bv) do
-    self_pid = self()
-    send(:db, {:query, self_pid, bv})
-    receive do
-      {:ok, title, author, image} ->
-        {title, author, image}
+    case GenServer.call(:db, {:query, bv}) do
+      {:ok, title, author} ->
+        {title, author}
       msg -> IO.inspect msg
-    after
-      1000 -> get_bv_info(bv)
     end
   end
 end

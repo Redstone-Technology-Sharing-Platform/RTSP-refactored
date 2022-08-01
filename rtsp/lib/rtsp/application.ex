@@ -10,11 +10,7 @@ defmodule Rtsp.Application do
         scheme: :http, plug: Rtsp.Router,
         options: [port: 8080]
       },
-      %{
-        id: DB,
-        start: {Rtsp.Crawler.DB, :start, []},
-        type: :worker,
-      }
+      Rtsp.Crawler.DB
     ]
     opts = [strategy: :one_for_one, name: Rtsp.Supervisor]
 
