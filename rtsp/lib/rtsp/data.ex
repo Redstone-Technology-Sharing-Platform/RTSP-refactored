@@ -2,9 +2,10 @@ defmodule Rtsp.Data do
   defstruct [:title, :path, :description, list: [], sidebar: []]
   alias Rtsp.Data
 
+  @basic_path "./technical_survival/"
   @data_path "../data/"
   @image_path "section_icons/"
-  @bv_image_path "/bilibili/"
+  @bv_image_path "bilibili/"
   @bilibili "https://bilibili.com/"
 
   @spec list(String.t) :: {:ok, Data} | {:error, term}
@@ -22,7 +23,7 @@ defmodule Rtsp.Data do
             list: Map.keys(content) -- ["title", "description"]
             |> Enum.map(fn key ->
               # add :path and :image for each obj in list
-              Map.put(content[key], :path, key)
+              Map.put(content[key], :path, @basic_path <> path <> "/" <> key)
               |> Map.put(:image, @image_path <> path <> "/" <> key <> ".jpg")
             end)
         |> IO.inspect()
@@ -53,7 +54,7 @@ defmodule Rtsp.Data do
             },
             list: Map.keys(content_part) -- ["title", "description"]
             |> Enum.map(fn key ->
-              Map.put(content_part[key], :path, path_2 <> "/" <> key)
+              Map.put(content_part[key], :path, @basic_path <> path_1 <> "/" <> path_2 <> "/" <> key)
               |> Map.put(:image, @image_path <> "#{path_1}/#{path_2}/#{key}.jpg")
             end)
             |> IO.inspect()
