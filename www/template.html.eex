@@ -68,11 +68,11 @@
             <!-- SideBar -->
             <ul class="text-grey lg:text-grey-dark list-reset leading-loose mt-2" id="sidenav-categories">
               <%=
-              Enum.map(data.sidebar.list, fn {path, title} ->
+              Enum.map(data.sidebar.list, fn item ->
                   ~s/
                   <li class="hover:text-indigo-dark hover:cursor-pointer transition-normal ml-1 border-l border-grey-dark pl-4">
-                  <a href="#{path}" class="link text-black no-underline">
-                  #{title}
+                  <a href="#{item.path}" class="link text-black no-underline">
+                  #{item.title}
                   <\/a>
                   <\/li>
                   / end)
@@ -117,7 +117,13 @@
               <\/div>
               <\/div>
               / end)
-          |> Enum.map_every(2, fn str -> String.replace(str, ":#999999", ":#b3b3b3") end)
+          |> Enum.with_index(fn str, index ->
+                if rem(index, 4) == 0 or rem(index, 4) == 3 do
+                  String.replace(str, ":#999999", ":#b3b3b3")
+                else
+                  str
+                end
+              end)
           %>
         </div>
       </div>

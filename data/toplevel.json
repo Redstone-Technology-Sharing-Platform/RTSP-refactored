@@ -1,4 +1,7 @@
-{
-    "block_resources": "方块资源获取",
-    "world_control": "世界控制"
-}
+[
+    {
+        "path": "block_resources",
+        "title": "方块资源获取",
+        "description": "这是一个一个简介"
+    }
+]

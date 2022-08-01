@@ -1,12 +1,33 @@
 defmodule Rtsp.Data do
-  defstruct [:title, :path, :description, list: [], sidebar: []]
+  defstruct [:title, :description, :path, list: [], sidebar: []]
   alias Rtsp.Data
 
-  @basic_path "./technical_survival/"
+  @basic_path "technical_survival/"
   @data_path "../data/"
   @image_path "section_icons/"
   @bv_image_path "bilibili/"
   @bilibili "https://bilibili.com/"
+  @toplevel_title "技术向生存分类"
+
+  @spec toplevel() :: {:ok, Data} | {:error, term}
+  def toplevel() do
+    content = parse_toplevel()
+    data =
+      %Data{
+        title: @toplevel_title,
+        description: @toplevel_title,
+        sidebar: %{top: @toplevel_title, list: parse_toplevel()},
+        list: content
+        |> Enum.map(fn obj ->
+          %{
+            "title" => obj.title,
+            "description" => obj.description,
+            path: @basic_path <> obj.path,
+            image: @image_path <> obj.path <> ".jpg"}
+        end)
+      }
+    {:ok, data}
+  end
 
   @spec list(String.t) :: {:ok, Data} | {:error, term}
   # techinal_survival/block_resources
@@ -18,8 +39,7 @@ defmodule Rtsp.Data do
           %Data{
             title: content["title"],
             description: content["description"],
-            path: path,
-            sidebar: %{top: "技术向生存分类", list: parse_toplevel()},
+            sidebar: %{top: @toplevel_title, list: parse_toplevel()},
             list: Map.keys(content) -- ["title", "description"]
             |> Enum.map(fn key ->
               # add :path and :image for each obj in list
@@ -42,14 +62,13 @@ defmodule Rtsp.Data do
           {:ok, content_part} ->
             data = %Data{
             title: content_part["title"],
-            path: path_1 <> "/" <> path_2,
             description: content_part["description"],
             sidebar: %{
               top: content["title"],
               list:
               Map.keys(content) -- ["title", "description"]
               |> Enum.map(fn key ->
-                {key, content[key]["title"]}
+                %{path: key, title: content[key]["title"]}
               end)
             },
             list: Map.keys(content_part) -- ["title", "description"]
@@ -79,7 +98,6 @@ defmodule Rtsp.Data do
               {:ok, content_part} ->
                 data = %Data{
                 title: content_part["title"],
-                path: path_1 <> "/" <> path_2 <> "/" <> path_3,
                 description: content_part["description"],
                 sidebar: %{
                   top: content_path_1["title"],
@@ -108,6 +126,9 @@ defmodule Rtsp.Data do
     end
   end
 
+  def generate_toplevel_file() do
+    nil
+  end
 
   defp parse_file(path) do
     expand_path = @data_path <> path <> ".toml"
@@ -124,8 +145,7 @@ defmodule Rtsp.Data do
 
   defp parse_toplevel() do
     expand_path = @data_path <> "toplevel.json"
-    Poison.decode!(File.read!(expand_path))
-    |> Map.to_list()
+    Poison.decode!(File.read!(expand_path), %{keys: :atoms})
   end
 
   defp get_bv_info(bv) do

@@ -22,3 +22,27 @@ videos = [
        "BV1U5411c7jU",
        "BV1H54y1877o",
 ]
+
+[stone]
+title = "石材"
+description = "刷石机"
+
+[stone.wither]
+title = "凋灵刷石机"
+description = "可怜的工具凋"
+videos = [
+        "BV11o4y1Q7n7",
+        "BV15p4y1p7eL",
+        "BV15p4y1p7eL",
+        "BV1sC4y1t7kc",
+]
+
+[stone.player]
+title = "精准挖石机"
+description = "可怜的玩家("
+videos = [
+        "BV1sg411L78s",
+]
+
+
+
