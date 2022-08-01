@@ -1,9 +1,10 @@
 defmodule Rtsp.Data do
-  defstruct [:title, :path, :description, :image, list: []]
+  defstruct [:title, :path, :description, list: [], sidebar: []]
   alias Rtsp.Data
+
   @data_path "../data/"
-  @image_path "/assets/images/section_icons/"
-  @bv_image_path "/assets/images/bilibili/"
+  @image_path "section_icons/"
+  @bv_image_path "/bilibili/"
   @bilibili "https://bilibili.com/"
 
   @spec list(String.t) :: {:ok, Data} | {:error, term}
@@ -12,16 +13,18 @@ defmodule Rtsp.Data do
     case parse_file(path) do
       {:error, _} = error -> error
       {:ok, content} ->
-        data = %Data{
-        title: content["title"],
-        path: path,
-        description: content["description"],
-        list: Map.keys(content) -- ["title", "description"]
-        |> Enum.map(fn key ->
-          # add :path and :image for each obj in list
-          Map.put(content[key], :path, path <> "/" <> key)
-          |> Map.put(:image, @image_path <> path <> "/" <> key <> ".jpg")
-        end)
+        data =
+          %Data{
+            title: content["title"],
+            description: content["description"],
+            path: path,
+            sidebar: %{top: "技术向生存分类", list: parse_toplevel()},
+            list: Map.keys(content) -- ["title", "description"]
+            |> Enum.map(fn key ->
+              # add :path and :image for each obj in list
+              Map.put(content[key], :path, key)
+              |> Map.put(:image, @image_path <> path <> "/" <> key <> ".jpg")
+            end)
         |> IO.inspect()
       }
         {:ok, data}
@@ -40,10 +43,17 @@ defmodule Rtsp.Data do
             title: content_part["title"],
             path: path_1 <> "/" <> path_2,
             description: content_part["description"],
-            image: "",
+            sidebar: %{
+              top: content["title"],
+              list:
+              Map.keys(content) -- ["title", "description"]
+              |> Enum.map(fn key ->
+                {key, content[key]["title"]}
+              end)
+            },
             list: Map.keys(content_part) -- ["title", "description"]
             |> Enum.map(fn key ->
-              Map.put(content_part[key], :path, key)
+              Map.put(content_part[key], :path, path_2 <> "/" <> key)
               |> Map.put(:image, @image_path <> "#{path_1}/#{path_2}/#{key}.jpg")
             end)
             |> IO.inspect()
@@ -70,7 +80,14 @@ defmodule Rtsp.Data do
                 title: content_part["title"],
                 path: path_1 <> "/" <> path_2 <> "/" <> path_3,
                 description: content_part["description"],
-                image: "",
+                sidebar: %{
+                  top: content_path_1["title"],
+                  list:
+                  Map.keys(content_path_1) -- ["title", "description"]
+                  |> Enum.map(fn key ->
+                    {key, content_path_1[key]["title"]}
+                  end)
+                },
                 list: content_part["videos"]
                 |> IO.inspect
                 |> Enum.map(fn bv ->
@@ -91,7 +108,6 @@ defmodule Rtsp.Data do
   end
 
 
-  @spec parse_file(String.t) :: {:ok, %{String.t => term}} | {:error, term}
   defp parse_file(path) do
     expand_path = @data_path <> path <> ".toml"
     if File.exists?(expand_path) do
@@ -103,6 +119,12 @@ defmodule Rtsp.Data do
     else
       {:error, :notfound}
     end
+  end
+
+  defp parse_toplevel() do
+    expand_path = @data_path <> "toplevel.json"
+    Poison.decode!(File.read!(expand_path))
+    |> Map.to_list()
   end
 
   defp get_bv_info(bv) do
