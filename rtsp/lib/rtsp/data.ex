@@ -104,7 +104,7 @@ defmodule Rtsp.Data do
                   list:
                   Map.keys(content_path_1) -- ["title", "description"]
                   |> Enum.map(fn key ->
-                    {key, content_path_1[key]["title"]}
+                    %{path: key, title: content_path_1[key]["title"]}
                   end)
                 },
                 list: content_part["videos"]
