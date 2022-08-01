@@ -40,7 +40,7 @@
           </div>
         </span>
         <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=-pxiOOYI_hHklWbJOE_UTqyW0IbdZ97C&jump_from=webapi" class="text-sm text-right text-white py-2 px-3 hover:text-grey-dark no-underline hidden lg:block lg:w-1/3 px-6" style="padding-left: 0px;width: 424px;">加入QQ群</a>
-        <a href="zanzhu.html" class="text-sm text-right text-white py-2 px-3 hover:text-grey-dark no-underline hidden lg:block lg:w-1/3 px-6" style="padding-left: 0px;width: 124px;">赞助我们</a>
+        <a href="sponsor.html" class="text-sm text-right text-white py-2 px-3 hover:text-grey-dark no-underline hidden lg:block lg:w-1/3 px-6" style="padding-left: 0px;width: 124px;">赞助我们</a>
       </div>
     </div>
     <!-- Main -->
