@@ -23,6 +23,50 @@ videos = [
        "BV1H54y1877o",
 ]
 
+[tree.common small]
+title = "普通小树"
+description = "普通"
+videos = [
+       "BV1Uz4y117H5",
+]
+
+[tree.Whole species]
+title = "全树种"
+description = "一个树场搞定所有树"
+videos = [
+       "BV1SU4y137y9",
+       "BV1Dz4y1r7DC",
+       "BV1Y5411E73D",
+]
+
+[tree.clear All Leaves]
+title = "全清全树种"
+description = "全部树叶"
+videos = [
+       "BV18s411K7Yg",
+]
+
+[tree.aircraft]
+title = "飞行器树厂"
+description = "超级慢"
+videos = [
+       "BV1Uv411j7Z4",
+]
+
+[tree.unmanned]
+title = "无人树厂"
+description = "解放双手"
+videos = [
+       "BV1E34y1D7nm",
+]
+
+[tree.Nether fungus]
+title = "下界菌树厂"
+description = "诡异菌"
+videos = [
+       "BV1754y1Y7YN",
+]
+
 [stone]
 title = "石材"
 description = "刷石机"
