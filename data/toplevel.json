@@ -1,7 +1,1 @@
-[
-    {
-        "path": "block_resources",
-        "title": "方块资源获取",
-        "description": "这是一个一个简介"
-    }
-]
+[{"title":"方块资源获取","path":"block_resources","description":"树场，石材，铁，绿宝石，冰，雪，重力方块，混凝土，黑曜石，末地石，土，树叶，基岩，气泡柱，地狱门方块，地狱岩，羊毛"}]

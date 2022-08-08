@@ -127,7 +127,15 @@ defmodule Rtsp.Data do
   end
 
   def generate_toplevel_file() do
-    nil
+    {:ok, toplevel_file} = Path.wildcard(@data_path <> "*.toml")
+    |> Enum.map(fn file -> {
+      String.replace(file, ".toml", "") |> String.replace(@data_path, ""),
+      Toml.decode_file!(file)}
+    end)
+    |> Enum.filter(fn {_path, decoded} -> decoded["title"] != nil end)
+    |> Enum.map(fn {path, decoded} -> %{path: path, title: decoded["title"], description: decoded["description"]} end)
+    |> Poison.encode()
+    File.write(@data_path <> "toplevel.json", toplevel_file)
   end
 
   defp parse_file(path) do
