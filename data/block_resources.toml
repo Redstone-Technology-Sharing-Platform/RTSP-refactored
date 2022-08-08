@@ -62,10 +62,11 @@ videos = [
 
 [tree.nether_fungus]
 title = "下界菌树厂"
-description = "诡异菌"
+description = "地狱级机器"
 videos = [
        "BV1754y1Y7YN",
 ]
+
 
 [stone]
 title = "石材"
@@ -88,5 +89,128 @@ videos = [
         "BV1sg411L78s",
 ]
 
+[stone.basalt]
+title = "玄武岩"
+description = "新石头!"
+videos = [
+       "BV1Hh411J7KU",
+]
 
+
+[iron]
+title = "铁"
+description = "单村刷铁机，堆叠刷铁机"
+
+[iron.single_village]
+title = "单村刷铁机"
+description = "单倍效率"
+videos = [
+       "BV1iA411n7GR",
+       "BV1ar4y1F7Wy",
+]
+
+[iron.multi_village]
+title = "堆叠刷铁机"
+description = "更多铁!"
+videos = [
+       "BV1ya41147Er",
+       "BV1S44y1p77g",
+]
+
+
+[emerald]
+title = "绿宝石"
+description = "钱"
+
+[emerald.single_village]
+title = "单村掠夺塔机"
+description = "单倍效率"
+videos = [
+       "BV17541137gt",
+]
+
+[emerald.stack]
+title = "堆叠掠夺塔"
+description = "掠夺者直呼***"
+videos = [
+       "BV1pJ411Y7S4",
+]
+
+[emerald.fast]
+title = "秒杀掠夺塔"
+description = "掠夺者直呼好残忍"
+videos = [
+       "BV1Cj411f7ri",
+]
+
+
+[ice]
+title = "冰"
+description = "我超, 冰!"
+
+[ice.move_player]
+title = "移动玩家刷冰机"
+description = "工具人!"
+videos = [
+       "BV1Cp4y147MQ",
+]
+
+[ice.move_ice]
+title = "移动冰刷冰机"
+description = "上万的效率!"
+videos = [
+       "BV1gE411P73R",
+]
+
+
+[snow]
+title = "雪"
+description = ""
+
+[snow.piston]
+title = "活塞推雪球"
+description = "工具人"
+videos = [
+]
+
+[snow.ravager]
+title = "劫掠兽刷雪机"
+description = "工具兽"
+videos = [
+]
+
+[snow.water]
+title = "水流刷雪机"
+description = "水?"
+videos = [
+]
+
+[snow.layer]
+title = "刷雪片机"
+description = "雪片可以破基岩!"
+videos = [
+]
+
+
+[falling_block]
+title = "重力方块"
+description = ""
+
+[falling_block.end_portal]
+title = "末地门刷沙机"
+description = "串通两个世界的, 竟然是..."
+videos = [
+]
+
+[falling_block.reload]
+title = "重加载区块刷沙机"
+description = "游戏特性"
+videos = [
+]
+
+[falling_block.universal]
+title = "通用重力方块机"
+description = "什么都能刷"
+videos = [
+]
 
