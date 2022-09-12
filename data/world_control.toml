@@ -1,0 +1,37 @@
+#BE生电顶层分区之一世界控制
+
+title =  "世界控制"
+description = "伪和平，方块更新"
+
+#伪和平
+
+[Pseudo peace]
+title = "伪和平"
+description = "怪物都去哪里了？"
+
+[global.Pseudo peace]
+title = "全局伪和平"
+description = "来来回回"
+videos = [
+       "暂无BV号",
+]
+
+[density.Pseudo peace]
+title = "密度伪和平"
+description = "缩"
+videos = [
+       "暂无BV号",
+]
+
+#方块更新
+
+[Pseudo peace]
+title = "方块更新"
+description = "。。。"
+
+[pendingtikc update delayed]
+title = "pendingtikc更新延后"
+description = "会卡顿吗"
+videos = [
+       "暂无BV号",
+]
