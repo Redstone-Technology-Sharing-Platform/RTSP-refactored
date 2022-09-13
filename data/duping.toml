@@ -1,0 +1,37 @@
+#BE生电顶层分区之一复制
+
+title =  "复制"
+description = "物品复制，附魔复制"
+
+#物品复制
+
+[duping]
+title = "物品复制"
+description = "刷~"
+
+[change name.duping]
+title = "铁砧改名复制"
+description = "怎么做？"
+videos = [
+       "暂无BV号",
+]
+
+[push container.duping]
+title = "铁砧改名复制"
+description = "怎么做？"
+videos = [
+       "暂无BV号",
+]
+
+#精修装备复制
+
+[duping equipment]
+title = "精修装备复制"
+description = "原版无限附魔台"
+
+[duping equipment-two]
+title = "铁砧改名复制"
+description = "怎么做？"
+videos = [
+       "暂无BV号",
+]
