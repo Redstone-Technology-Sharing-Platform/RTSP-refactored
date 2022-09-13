@@ -13,14 +13,14 @@ description = "刷~"
 title = "铁砧改名复制"
 description = "怎么做？"
 videos = [
-       "暂无BV号",
+       "",
 ]
 
 [push container.duping]
 title = "铁砧改名复制"
 description = "怎么做？"
 videos = [
-       "暂无BV号",
+       "",
 ]
 
 #精修装备复制
@@ -33,5 +33,5 @@ description = "原版无限附魔台"
 title = "铁砧改名复制"
 description = "怎么做？"
 videos = [
-       "暂无BV号",
+       "",
 ]

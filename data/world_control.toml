@@ -13,14 +13,14 @@ description = "怪物都去哪里了？"
 title = "全局伪和平"
 description = "来来回回"
 videos = [
-       "暂无BV号",
+       "",
 ]
 
 [density.Pseudo peace]
 title = "密度伪和平"
 description = "缩"
 videos = [
-       "暂无BV号",
+       "",
 ]
 
 #方块更新
@@ -33,5 +33,5 @@ description = "。。。"
 title = "pendingtikc更新延后"
 description = "会卡顿吗"
 videos = [
-       "暂无BV号",
+       "",
 ]
