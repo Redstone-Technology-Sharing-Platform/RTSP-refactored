@@ -1,0 +1,386 @@
+#BE生电顶层分区之一农业-完成
+
+title =  "农业"
+description = "哪个玩家不会种地呢？"
+
+[wheat]
+title = "小麦 胡萝卜 甜菜 马铃薯"
+description = "村民农田 水流农田 afk作物机"
+
+#小麦
+
+[wheat.villager]
+title = "村民农田"
+description = "压榨奸商"
+videos = [
+       "",
+]
+
+[wheat.stream]
+title = "水流农田"
+description = "半自动"
+videos = [
+       "",
+]
+
+[wheat.afk]
+title = "afk作物机"
+description = "超级快"
+videos = [
+       "",
+]
+
+#瓜类
+
+[Melons]
+title = "瓜类"
+description = "飞行器瓜机 检测式瓜机 时钟密堆瓜机 劫掠兽瓜机"
+
+[Melons.aerocraft]
+title = "飞行器瓜机"
+description = "不快不慢"
+videos = [
+       "",
+]
+
+[Melons.detecting]
+title = "检测式瓜机"
+description = "全自动"
+videos = [
+       "",
+]
+
+[Melons.clock]
+title = "时钟密堆瓜机"
+description = "一劳永逸"
+videos = [
+       "",
+]
+
+
+[Melons.Marauding_beasts]
+title = "劫掠兽瓜机"
+description = "又是工具兽"
+videos = [
+       "",
+]
+
+#甘蔗
+
+[sugarcane]
+title = "甘蔗"
+description = "飞行器甘蔗机 检测式甘蔗机"
+
+[sugarcane.aerocraft]
+title = "飞行器甘蔗机"
+description = "不快 不慢"
+videos = [
+       "",
+]
+
+[sugarcane.detecting]
+title = "检测式甘蔗机"
+description = "全自动"
+videos = [
+       "",
+]
+
+#紫颂植物
+
+[Purple_Song]
+title = "紫颂植物"
+description = "afk紫颂花农场 紫颂果农场"
+
+[Purple_Song.afk]
+title = "afk紫颂花农场"
+description = "花？能吃吗（"
+videos = [
+       "",
+]
+
+[Purple_Song.afk]
+title = "afk紫颂花农场"
+description = "花？能吃吗（"
+videos = [
+       "",
+]
+
+[Purple_Song.afk]
+title = "紫颂果农场"
+description = "果子能吃"
+videos = [
+       "",
+]
+
+#仙人掌
+
+[cactus]
+title = "密堆仙人掌"
+description = "密堆仙人掌"
+videos = [
+       "",
+]
+
+
+#小蘑菇
+
+[Small.mushrooms]
+title = "小蘑菇"
+description = "棕蘑菇厂 红蘑菇厂"
+
+[detecting.mushrooms]
+title = "检测式小蘑菇"
+description = "侦测器？"
+videos = [
+       "",
+]
+
+[clock.mushrooms]
+title = "时钟式小蘑菇农场"
+description = "侦测器：？"
+videos = [
+       "",
+]
+
+#大蘑菇
+
+[Large.mushrooms]
+title = "大蘑菇"
+description = "棕蘑菇厂 红蘑菇厂"
+
+[Brown.mushrooms]
+title = "棕蘑菇厂"
+description = "伞"
+videos = [
+       "",
+]
+
+[Red.mushrooms]
+title = "红蘑菇厂"
+description = "可以做房子"
+videos = [
+       "",
+]
+
+#地狱疣
+
+[Hell warts]
+title = "地狱疣"
+description = "afk地狱疣机"
+videos = [
+       "",
+]
+
+#藤蔓
+
+[vine]
+title = "藤蔓"
+description = "绿油油的"
+videos = [
+       "",
+]
+
+#可可豆
+
+[cacao]
+title = "可可豆"
+description = "afk可可豆机 骨粉可可豆机"
+
+[cacao.afk]
+title = "afk可可豆机"
+description = "自然生长"
+videos = [
+       "",
+]
+
+[cacao.manure]
+title = "骨粉可可豆机"
+description = "强制催熟"
+videos = [
+       "",
+]
+
+#珊瑚
+
+[coral]
+title = "珊瑚"
+description = "珊瑚机 死珊瑚机"
+
+[coral.afk]
+title = "珊瑚机"
+description = "不能离开水"
+videos = [
+       "",
+]
+
+[coral.Dead]
+title = "死珊瑚机"
+description = "离开水"
+videos = [
+       "",
+]
+
+#海泡菜
+
+
+#海带
+
+[kelp]
+title = "海带"
+description = "骨粉催熟海带机 飞行器海带机"
+
+[kelp.manure]
+title = "骨粉海带机"
+description = "要骨粉"
+videos = [
+       "",
+]
+
+[kelp.aerocraft]
+title = "飞行器海带机"
+description = "自然生长"
+videos = [
+       "",
+]
+
+#浆果
+
+[berry]
+title = "浆果"
+description = "狐狐浆果机 afk浆果机"
+
+[berry.fox]
+title = "狐狸浆果机"
+description = "狐狐！"
+videos = [
+       "",
+]
+
+[berry.afk]
+title = "afk浆果机"
+description = "一直点"
+videos = [
+       "",
+]
+
+#竹子
+
+[bamboo]
+title = "竹子"
+description = "飞行器竹子机 检测式竹子机"
+
+[bamboo.aerocraft]
+title = "飞行器竹子机"
+description = "一直点"
+videos = [
+       "",
+]
+
+[bamboo.detecting]
+title = "检测式竹子机"
+description = "一直点"
+videos = [
+       "",
+]
+
+#区块加载催熟
+
+[load]
+title = "区块加载催熟"
+description = "区块加载催熟瓜机 区块加载催熟竹子机 区块加载催熟海带机 区块加载催熟甘蔗机 区块加载紫颂果农场 区块加载催熟仙人掌机 区块加载蔓延小蘑菇 区块加载催熟地狱疣 区块加载作物机 区块加载多核树场"
+
+[load.01]
+title = "区块加载催熟瓜机"
+videos = [
+       "",
+]
+
+[load.02]
+title = "区块加载催熟竹子机"
+videos = [
+       "",
+]
+
+[load.03]
+title = "区块加载催熟海带机"
+videos = [
+       "",
+]
+
+[load.04]
+title = "区块加载催熟甘蔗机"
+videos = [
+       "",
+]
+
+[load.05]
+title = "区块加载紫颂果农场"
+videos = [
+       "",
+]
+
+[load.06]
+title = "区块加载催熟仙人掌机"
+videos = [
+       "",
+]
+
+[load.07]
+title = "区块加载催熟小蘑菇"
+videos = [
+       "",
+]
+
+[load.08]
+title = "区块加载催熟地狱疣"
+videos = [
+       "",
+]
+
+[load.09]
+title = "区块加载催熟作物机"
+videos = [
+       "",
+]
+
+[load.10]
+title = "区块加载多核树场"
+videos = [
+       "",
+]
+
+#抖沙催熟
+
+[sand]
+title = "抖沙催熟"
+description = "抖沙海带机 抖沙竹子机 抖沙甘蔗机 抖沙仙人掌"
+
+[sand.01]
+title = "区块加载多核树场"
+videos = [
+       "",
+]
+
+[sand.02]
+title = "区块加载多核树场"
+videos = [
+       "",
+]
+
+[sand.03]
+title = "区块加载多核树场"
+videos = [
+       "",
+]
+
+[sand.04]
+title = "区块加载多核树场"
+videos = [
+       "",
+]
+
+#更新延后催熟
+
+[Update suppression]
+title = "更新延后催熟"
+description = "此特性已消失，作品不多，此板块暂时无法进入"
