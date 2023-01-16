@@ -25,7 +25,7 @@ defmodule Rtsp.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:httpoison, "~> 1.8"},
       {:poison, "~> 5.0"},
-      {:toml, "~> 0.6.2"}
+      {:toml, "~> 0.7"}
     ]
   end
 end

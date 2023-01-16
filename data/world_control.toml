@@ -1,37 +1,37 @@
-#BEÉúµç¶¥²ã·ÖÇøÖ®Ò»ÊÀ½ç¿ØÖÆ
+#BEç”Ÿç”µé¡¶å±‚åˆ†åŒºä¹‹ä¸€ä¸–ç•Œæ§åˆ¶
 
-title =  "ÊÀ½ç¿ØÖÆ"
-description = "Î±ºÍÆ½£¬·½¿é¸üĞÂ"
+title =  "ä¸–ç•Œæ§åˆ¶"
+description = "ä¼ªå’Œå¹³ï¼Œæ–¹å—æ›´æ–°"
 
-#Î±ºÍÆ½
+#ä¼ªå’Œå¹³
 
-[Pseudo peace]
-title = "Î±ºÍÆ½"
-description = "¹ÖÎï¶¼È¥ÄÄÀïÁË£¿"
+[pseudo_peace]
+title = "ä¼ªå’Œå¹³"
+description = "æ€ªç‰©éƒ½å»å“ªé‡Œäº†ï¼Ÿ"
 
-[global.Pseudo peace]
-title = "È«¾ÖÎ±ºÍÆ½"
-description = "À´À´»Ø»Ø"
+[pseudo_peace.global]
+title = "å…¨å±€ä¼ªå’Œå¹³"
+description = "æ¥æ¥å›å›"
 videos = [
        "",
 ]
 
-[density.Pseudo peace]
-title = "ÃÜ¶ÈÎ±ºÍÆ½"
-description = "Ëõ"
+[pseudo_peace.density]
+title = "å¯†åº¦ä¼ªå’Œå¹³"
+description = "ç¼©"
 videos = [
        "",
 ]
 
-#·½¿é¸üĞÂ
+#æ–¹å—æ›´æ–°
 
-[Pseudo peace]
-title = "·½¿é¸üĞÂ"
-description = "¡£¡£¡£"
+[block_update]
+title = "æ–¹å—æ›´æ–°"
+description = "ã€‚ã€‚ã€‚"
 
-[pendingtikc update delayed]
-title = "pendingtikc¸üĞÂÑÓºó"
-description = "»á¿¨¶ÙÂğ"
+[block_update.delayed]
+title = "pendingtikcæ›´æ–°å»¶å"
+description = "ä¼šå¡é¡¿å—"
 videos = [
        "",
 ]

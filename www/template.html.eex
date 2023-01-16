@@ -51,7 +51,7 @@
         <ul class="list-reset mb-8 w-full">
           <li class="ml-2 mb-4 flex">
             <img src="/assets/images/home-default.svg" alt="home-icon" class="w-4 h-4 mr-2">
-            <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium mobile-home-trigger">主页</div>
+            <div class="hover:cursor-pointer text-white lg:text-indigo-darkest no-underline font-medium mobile-home-trigger"><a href="/">主页</a></div>
           </li>
           <li class="ml-2 mb-4">
             <div class="flex" id="sidenav-categories-trigger">

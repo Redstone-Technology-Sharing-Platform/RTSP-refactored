@@ -1,37 +1,31 @@
-#BEÉúµç¶¥²ã·ÖÇøÖ®Ò»¸´ÖÆ
+#BEç”Ÿç”µé¡¶å±‚åˆ†åŒºä¹‹ä¸€å¤åˆ¶
 
-title =  "¸´ÖÆ"
-description = "ÎïÆ·¸´ÖÆ£¬¸½Ä§¸´ÖÆ"
+title =  "å¤åˆ¶"
+description = "ç‰©å“å¤åˆ¶ï¼Œé™„é­”å¤åˆ¶"
 
-#ÎïÆ·¸´ÖÆ
+#ç‰©å“å¤åˆ¶
 
 [duping]
-title = "ÎïÆ·¸´ÖÆ"
-description = "Ë¢~"
+title = "ç‰©å“å¤åˆ¶"
+description = "åˆ·~"
 
-[change name.duping]
-title = "ÌúÕè¸ÄÃû¸´ÖÆ"
-description = "ÔõÃ´×ö£¿"
+[duping.change_name]
+title = "é“ç §æ”¹åå¤åˆ¶"
+description = "æ€ä¹ˆåšï¼Ÿ"
 videos = [
        "",
 ]
 
-[push container.duping]
-title = "ÌúÕè¸ÄÃû¸´ÖÆ"
-description = "ÔõÃ´×ö£¿"
+[duping.push_container]
+title = "é“ç §æ”¹åå¤åˆ¶"
+description = "æ€ä¹ˆåšï¼Ÿ"
 videos = [
        "",
 ]
 
-#¾«ĞŞ×°±¸¸´ÖÆ
+#ç²¾ä¿®è£…å¤‡å¤åˆ¶
 
-[duping equipment]
-title = "¾«ĞŞ×°±¸¸´ÖÆ"
-description = "Ô­°æÎŞÏŞ¸½Ä§Ì¨"
+[duping.equipment]
+title = "ç²¾ä¿®è£…å¤‡å¤åˆ¶"
+description = "åŸç‰ˆæ— é™é™„é­”å°"
 
-[duping equipment-two]
-title = "ÌúÕè¸ÄÃû¸´ÖÆ"
-description = "ÔõÃ´×ö£¿"
-videos = [
-       "",
-]

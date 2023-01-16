@@ -1,4 +1,3 @@
-#BE生电顶层分区之一农业-完成
 
 title =  "农业"
 description = "哪个玩家不会种地呢？"
@@ -7,7 +6,6 @@ description = "哪个玩家不会种地呢？"
 title = "小麦 胡萝卜 甜菜 马铃薯"
 description = "村民农田 水流农田 afk作物机"
 
-#小麦
 
 [wheat.villager]
 title = "村民农田"
@@ -30,27 +28,26 @@ videos = [
        "",
 ]
 
-#瓜类
 
-[Melons]
+[melons]
 title = "瓜类"
 description = "飞行器瓜机 检测式瓜机 时钟密堆瓜机 劫掠兽瓜机"
 
-[Melons.aerocraft]
+[melons.flying_machine]
 title = "飞行器瓜机"
 description = "不快不慢"
 videos = [
        "",
 ]
 
-[Melons.detecting]
+[melons.detecting]
 title = "检测式瓜机"
 description = "全自动"
 videos = [
        "",
 ]
 
-[Melons.clock]
+[melons.clock]
 title = "时钟密堆瓜机"
 description = "一劳永逸"
 videos = [
@@ -58,20 +55,19 @@ videos = [
 ]
 
 
-[Melons.Marauding_beasts]
+[melons.beast]
 title = "劫掠兽瓜机"
 description = "又是工具兽"
 videos = [
        "",
 ]
 
-#甘蔗
 
 [sugarcane]
 title = "甘蔗"
 description = "飞行器甘蔗机 检测式甘蔗机"
 
-[sugarcane.aerocraft]
+[sugarcane.flying_machine]
 title = "飞行器甘蔗机"
 description = "不快 不慢"
 videos = [
@@ -85,34 +81,25 @@ videos = [
        "",
 ]
 
-#紫颂植物
 
-[Purple_Song]
+[chorus]
 title = "紫颂植物"
 description = "afk紫颂花农场 紫颂果农场"
 
-[Purple_Song.afk]
+[chorus.flower_afk]
 title = "afk紫颂花农场"
 description = "花？能吃吗（"
 videos = [
        "",
 ]
 
-[Purple_Song.afk]
-title = "afk紫颂花农场"
-description = "花？能吃吗（"
-videos = [
-       "",
-]
-
-[Purple_Song.afk]
+[chorus.fruit_afk]
 title = "紫颂果农场"
 description = "果子能吃"
 videos = [
        "",
 ]
 
-#仙人掌
 
 [cactus]
 title = "密堆仙人掌"
@@ -122,56 +109,52 @@ videos = [
 ]
 
 
-#小蘑菇
 
-[Small.mushrooms]
+[small_mushroom]
 title = "小蘑菇"
 description = "棕蘑菇厂 红蘑菇厂"
 
-[detecting.mushrooms]
+[small_mushroom.detect]
 title = "检测式小蘑菇"
 description = "侦测器？"
 videos = [
        "",
 ]
 
-[clock.mushrooms]
+[small_mushroom.clock]
 title = "时钟式小蘑菇农场"
 description = "侦测器：？"
 videos = [
        "",
 ]
 
-#大蘑菇
 
-[Large.mushrooms]
+[large_mushroom]
 title = "大蘑菇"
 description = "棕蘑菇厂 红蘑菇厂"
 
-[Brown.mushrooms]
+[large_mushroom.brown]
 title = "棕蘑菇厂"
 description = "伞"
 videos = [
        "",
 ]
 
-[Red.mushrooms]
+[large_mushroom.red]
 title = "红蘑菇厂"
 description = "可以做房子"
 videos = [
        "",
 ]
 
-#地狱疣
 
-[Hell warts]
+[nether_wart]
 title = "地狱疣"
 description = "afk地狱疣机"
 videos = [
        "",
 ]
 
-#藤蔓
 
 [vine]
 title = "藤蔓"
@@ -180,7 +163,6 @@ videos = [
        "",
 ]
 
-#可可豆
 
 [cacao]
 title = "可可豆"
@@ -200,7 +182,6 @@ videos = [
        "",
 ]
 
-#珊瑚
 
 [coral]
 title = "珊瑚"
@@ -213,37 +194,34 @@ videos = [
        "",
 ]
 
-[coral.Dead]
+[coral.dead]
 title = "死珊瑚机"
 description = "离开水"
 videos = [
        "",
 ]
 
-#海泡菜
 
 
-#海带
 
 [kelp]
 title = "海带"
 description = "骨粉催熟海带机 飞行器海带机"
 
-[kelp.manure]
+[kelp.bonemeal]
 title = "骨粉海带机"
 description = "要骨粉"
 videos = [
        "",
 ]
 
-[kelp.aerocraft]
+[kelp.flying_machine]
 title = "飞行器海带机"
 description = "自然生长"
 videos = [
        "",
 ]
 
-#浆果
 
 [berry]
 title = "浆果"
@@ -263,13 +241,12 @@ videos = [
        "",
 ]
 
-#竹子
 
 [bamboo]
 title = "竹子"
 description = "飞行器竹子机 检测式竹子机"
 
-[bamboo.aerocraft]
+[bamboo.flying_machine]
 title = "飞行器竹子机"
 description = "一直点"
 videos = [
@@ -283,104 +260,83 @@ videos = [
        "",
 ]
 
-#区块加载催熟
 
 [load]
 title = "区块加载催熟"
-description = "区块加载催熟瓜机 区块加载催熟竹子机 区块加载催熟海带机 区块加载催熟甘蔗机 区块加载紫颂果农场 区块加载催熟仙人掌机 区块加载蔓延小蘑菇 区块加载催熟地狱疣 区块加载作物机 区块加载多核树场"
+description = ""
 
-[load.01]
+[load.melon]
 title = "区块加载催熟瓜机"
 videos = [
        "",
 ]
 
-[load.02]
+[load.banboo]
 title = "区块加载催熟竹子机"
 videos = [
        "",
 ]
 
-[load.03]
+[load.kelp]
 title = "区块加载催熟海带机"
 videos = [
        "",
 ]
 
-[load.04]
+[load.sugarcane]
 title = "区块加载催熟甘蔗机"
 videos = [
        "",
 ]
 
-[load.05]
+[load.chorus]
 title = "区块加载紫颂果农场"
 videos = [
        "",
 ]
 
-[load.06]
+[load.cactus]
 title = "区块加载催熟仙人掌机"
 videos = [
        "",
 ]
 
-[load.07]
+[load.small_mushroom]
 title = "区块加载催熟小蘑菇"
 videos = [
        "",
 ]
 
-[load.08]
+[load.nether_wart]
 title = "区块加载催熟地狱疣"
 videos = [
        "",
 ]
 
-[load.09]
+[load.crop]
 title = "区块加载催熟作物机"
 videos = [
        "",
 ]
 
-[load.10]
+[load.multi_core_tree]
 title = "区块加载多核树场"
 videos = [
        "",
 ]
 
-#抖沙催熟
 
 [sand]
 title = "抖沙催熟"
 description = "抖沙海带机 抖沙竹子机 抖沙甘蔗机 抖沙仙人掌"
 
-[sand.01]
+[sand.multi_core_tree]
 title = "区块加载多核树场"
 videos = [
        "",
 ]
 
-[sand.02]
-title = "区块加载多核树场"
-videos = [
-       "",
-]
 
-[sand.03]
-title = "区块加载多核树场"
-videos = [
-       "",
-]
-
-[sand.04]
-title = "区块加载多核树场"
-videos = [
-       "",
-]
-
-#更新延后催熟
-
-[Update suppression]
+[update_suppression]
 title = "更新延后催熟"
 description = "此特性已消失，作品不多，此板块暂时无法进入"
